@@ -1,7 +1,8 @@
 # Distributed_Shared_Memory
 
 The goal of this project is to create a system responsible for sharing the virtual memory across several processes shared on several physical machines.
-The memory (address space) is split into different several memory pages which are 4KB memory blocs. All the processes are allowed to work on those pages (read and write) but only one process is owner of the page at a given moment.
+The memory (address space) is split into different several memory pages which are 4KB memory blocs. 
+All the processes are allowed to work on those pages (read and write) but only one process is owner of the page at a given moment.
 This means that the owner has the page in his address space and other processes willing to access this page will provoke a segfault.
 When such a signal is caught, the process responsible sends a request to the proprietary process to become the new owner of the page.
 The default page allocation is round-robin fashioned.
