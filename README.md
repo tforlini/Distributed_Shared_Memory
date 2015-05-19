@@ -1,4 +1,4 @@
-# Distributed_Shared_Memory
+# Distributed Shared Memory
 
 The goal of this project is to create a system responsible for sharing the virtual memory across several processes shared on several physical machines.
 
